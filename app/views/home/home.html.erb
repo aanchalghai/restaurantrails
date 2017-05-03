@@ -1,0 +1,74 @@
+<div class="ab">
+<h6><marquee behavior="scroll" direction="left">Order food online on FOOD JOINT</marquee></h6>
+
+<h1>Food Joint</h1>
+
+
+
+<h5><marquee behavior="scroll" direction="left">You can choose your food here.kindly place it over phone.</marquee></h5>
+</div>
+
+<div class="aa">
+<a href="/rest/index">Restaurants</a>
+</div>
+
+<div class="navbar">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Signup", signup_index_path %>
+  <%= link_to "Login", login_index_path%>
+<% end %>
+</div>
+<style style="text/css">
+div.slide-slow {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-slow div.inner {
+  animation: slide-slow 5s;
+  margin-top:0%;
+}
+
+@keyframes slide-slow {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+</style>
+
+<div class="slide-slow">
+<div class="inner">
+<img src="http://s.eatthis-cdn.com/media/images/ext/336492655/fast-food.jpg" style="height:1080px;width:1920px" alt="Swimming fish">
+</div>
+
+<style>
+.aa{
+    text-align:left;
+	position:fixed;
+	top:3%;
+	left:97%;
+	transform: translate(-50%,-50%);
+	
+
+}
+.ab{
+    text-align:center;
+	position:fixed;
+	top:45%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	font-size:55px;
+	font-family:futura;
+
+}
+.navbar{
+text-align:right;
+position:fixed;}
+</style>
